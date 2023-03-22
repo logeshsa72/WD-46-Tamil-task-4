@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flag</title>
+</head>
+<body>
+
+</body>
+</html>
+<script >
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','https://restcountries.com/v3.1/all');
+    xhr.responseType = 'json';
+    xhr.send();
+    xhr.onload = function(){
+        var responObj = xhr.response;
+        for(var i=0; i<=responObj.length;i++){
+            console.log(responObj[i]);
+        }
+    }
+</script>

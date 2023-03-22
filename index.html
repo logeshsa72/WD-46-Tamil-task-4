@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var user1 = {name: "person" ,age: 5};
+    var user2 = {age:5 , name: "person"};
+
+    function isEqual(user1,user2){
+        var user1keys = Object.keys(user1);
+        var user2keys = Object.keys(user2);
+        if(user1keys.length !=user2keys.length){
+            return false;
+        }
+      for (var user1keys of user2keys){
+       if(user1[user1keys] !=user2[user2keys]){
+        return true;
+       }
+      }
+      return true;
+    }
+    console.log(isEqual(user1,user2));
+</script>
